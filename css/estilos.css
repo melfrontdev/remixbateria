@@ -1,0 +1,77 @@
+
+body {
+  align-items: center;
+  background: linear-gradient(-45deg, #a7cfdf, #23538a, #093e56, #0b6170, #72d8b6);
+  background-size: 400% 400%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  animation: gradientAnimation 10s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.teclado {
+  background: linear-gradient(to bottom, transparent);
+  border: 2px solid rgba(0, 0, 0, 0.141);
+  box-shadow: 2px 2px 4px #666, 10px 10px 10px #000;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.tecla {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 3px 3px 0 #fff;
+  color: black;
+  cursor: pointer;
+  height: 120px;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+  width: 120px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.tecla:hover {
+  background: linear-gradient(to bottom, rgb(138, 205, 228) 0%, rgb(122, 171, 202) 50%, rgb(43, 108, 165) 100%);
+  color: #000000;
+  box-shadow: 2px 2px 0;
+  animation: pulseAnimation 1s infinite;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
